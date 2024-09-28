@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<!-- Also read chapter 9 from slides - Regular Expressions -->
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Table CheckList</title>
+	<link rel="stylesheet" type="text/css" href="table.css">
+	
+</head>
+<body>
+	<!-- <header>
+		<h1><center>Maitri Pasale</center></h1>
+	</header> -->
+
+	<div id="loading">Loading...</div>
+    <div id="content" style="display:none;">
+		<div class="centered">
+			<h1 id="fullName"></h1>  <!-- Display Full Name -->
+			<h2 id="nuid"></h2>  <!-- Display NUID -->
+		</div>
+
+
+	<table id="myTable">
+		<tr>
+			<th></th>
+			<th>STUDENT</th>
+			<th>ADVISOR</th>
+			<th>AWARD<br/>STATUS</th>
+			<th>SEMESTER</th>
+			<th>TYPE</th>
+			<th>BUDGET<br />#</th>
+			<th>PERCENTAGE</th>
+		</tr>
+		<tr id='1'>
+			<td><input type="checkbox" onclick="changeColor(this)" /><br /><br /><img src="down.png" onclick="viewInfo(this)" width="25px" /></td>
+			<td>Student 1</td>
+			<td>Teacher 1</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>12345</td>
+			<td>100%</td>
+		</tr>
+		<tr id='2' class="textdrop" onclick="viewInfo(this)"><td class="box"colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		<tr id='3'>
+			<td><input type="checkbox" onclick="changeColor(this)"/><br /><br /><img src="down.png" onclick="viewInfo(this)" width="25px" /></td>
+			<td>Student 2</td>
+			<td>Teacher 2</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>23456</td>
+			<td>100%</td>
+		</tr>
+		<tr id='4'class="textdrop" onclick="viewInfo(this)"><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+		<tr id='5'>
+			<td><input type="checkbox" onclick="changeColor(this)" /><br /><br /><img src="down.png" onclick="viewInfo(this)" width="25px" /></td>
+			<td>Student 3</td>
+			<td>Teacher 3</td>
+			<td>Approved</td>
+			<td>Fall</td>
+			<td>TA</td>
+			<td>34567</td>
+			<td>100%</td>
+		</tr>
+		<tr id='6' class="textdrop" ><td colspan="8">
+			Advisor:<br /><br />
+			Award Details<br />
+			Summer 1-2014(TA)<br />
+			Budget Number: <br />
+			Tuition Number: <br />
+			Comments:<br /><br /><br />
+			Award Status:<br /><br /><br />
+		</td></tr>
+	</table>
+
+	<br /><br />
+	
+<center><button type="submit" id="submitbtn" disabled="true">Submit Selected Awards</button>
+<button onclick="addStudentRows()" id="addBtn">Add New Student</button></center>
+
+	<nav class="socialmediaicons"></nav>
+	<script src="script.js"></script>
+	<script>
+        // Simulating a loading delay
+        setTimeout(() => {
+            document.getElementById('fullName').textContent = 'Maitri Pasale';
+            document.getElementById('nuid').textContent = 'NUID: 002471534';
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }, 1000);  // 1-second delay
+    </script>
+
+</body>
+</html>
